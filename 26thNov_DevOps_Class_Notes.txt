@@ -5,7 +5,7 @@ Ubuntu Linux:
 apt-get install git
 git --version  ------------> verify
 
-
+ 
 ========================================================
 
 Configuring Git
