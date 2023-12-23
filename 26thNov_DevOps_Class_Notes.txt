@@ -1,0 +1,185 @@
+Installation
+
+Ubuntu Linux:
+
+apt-get install git
+git --version  ------------> verify
+
+
+========================================================
+
+Configuring Git
+
+git config --global user.name "santosh"
+git config --global user.email "santosh@gmail.com"
+git config --global core.editor "vi"
+
+git config --global core.editor "notepad"
+git config --list
+
+-------------------------------
+
+Evry command of git  -----> 
+
+git <verb>
+
+Initilize git:
+------------------------
+Git $ ls -la
+total 12
+drwxr-xr-x 3 root root 4096 Dec  2 15:22 .
+drwx------ 5 root root 4096 Dec  2 15:20 ..
+drwxr-xr-x 7 root root 4096 Dec  2 15:22 .git
+Git $
+
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        myfile.mpge4
+
+
+Git $ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Git $
+
+
+git add .gitignore
+git commit -m "Added the name inside gitignore"
+
+
+
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        1.mv
+        2.mv
+        3.mv
+
+
+vi .gitignore
+
+myfile.mpge4
+*.mv 
+
+
+* ------> Any number of characters
+
+
+
+Git $ git cat-file -p dcc033a
+tree 001f910f8a5e24482a0fd5df65abcbf87ae3a257
+
+git remote add origin https://github.com/discover-devops/remote2Dec.git
+
+git remote add myproject https://github.com/discover-devops/remote2Dec.git
+
+
+---------------------------------------------
+
+
+
+Create a remote repsitory at gitHUB
+git remote add projectA https://<path_of the_gitHub_repo>
+git remote -v  --------------> list down the remote repo
+git push origin main  ------------------> Uploading
+git push origin b1
+
+git pull projectA main
+
+git fetch ----> if there is missmatch
+
+git clone
+
+-------------------------
+
+The momnet you commit -----> MASTER
+
+bit branch ----> how many branches, I'm on whic branch *
+
+
+Git $ git branch
+* master
+Git $
+
+
+git branch <new_branch> <master>
+
+git branch b100 master
+
+
+Git $ git branch
+  b100
+* master------> HEAD
+Git $
+
+
+
+Go to branch b100 ----> BUG
+
+git checkout b100
+
+Git $ git checkout b100
+Switched to branch 'b100'
+
+Git $ git branch
+* b100
+  master
+Git $
+
+git mergge <SRC_Branch>  <Destnication_Branch>
+
+git merge b200 master
+
+
+bb522b9  -----> b200
+
+Git $ git merge b200 master
+Updating d5136c1..bb522b9
+Fast-forward
+ B.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 B.txt
+Git $
+
+
+=================================================================
+
+Jenkins Installation
+--------------------------
+
+Installation of Java   ------------> Done
+java -version
+sudo apt update
+sudo apt install openjdk-11-jre
+java -version
+
+
+
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+
+
+
+
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+export PATH=$PATH:$JAVA_HOME/bin
+echo $PATH
+
+/usr/lib/jvm/java-11-openjdk-amd64  -------------> Location of JAVA that I want to use 
+
+http://98.70.64.140:8080/github-webhook/
+
+http://
+
+http://98.70.64.140:8080/
+
+
+
